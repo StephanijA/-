@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плочки</title>
+    <link rel="stylesheet" href="stranica.css">
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Плочки</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Почетна</a></li>
+                <li><a href="#categories">Категории</a></li>
+                <li><a href="#products">Производи</a></li>
+                <li><a href="#contact">Контакт</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="container">
+        <h2>Добредојдовте во ИMKO!</h2>
+        <p>Квалитетни плочки за секој простор</p>
+    </div>
+</section>
+
+<section id="categories" class="categories">
+    <h2>Нашите Изработки</h2>
+    <div class="image-container">
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.29_13e685f9.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.29_dd5a05e3.jpg" >
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.29_ef35baf1.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_5ba4368b.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_9b317fcc.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_9394a4c8.jpg">
+        </div>
+
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_ce32c8ff.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_2c0e1c73.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_88d8d093.jpg">
+        </div>
+
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_300aa6f8.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_af292a17.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_d4641cad.jpg">
+        </div>
+    </div>
+</section>
+
+<section id="products" class="products">
+    <div class="container">
+        <h2>POPULAR WORKS</h2>
+        <div class="product-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_300aa6f8.jpg" >
+        </div>
+        <div class="product-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_af292a17.jpg">
+        </div>
+        <div class="product-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_d4641cad.jpg" >
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Контакт</h2>
+        <p>За сите прашања или информации, контактирајте не на:</p>
+        <p>Email: info@plockadom.mk</p>
+        <p>Телефон: 02 123 456</p>
+        <p>Адреса: Улица Плочки 123, Скопје</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2024 ИMKO. Сите права се задржани.</p>
+    </div>
+</footer>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let modal = document.getElementById("imageModal");
+        let modalImg = document.getElementById("modalImage");
+        let closeBtn = document.querySelector(".close");
+
+        document.querySelectorAll(".category-item img").forEach(img => {
+            img.onclick = function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            };
+        });
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+</script>
+
+
+
+</body>
+</html>
